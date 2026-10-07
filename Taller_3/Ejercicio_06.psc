@@ -1,0 +1,46 @@
+Algoritmo sum_pares
+	Definir opciones, iteracion, N, suma Como Entero
+	Escribir "Ingrese un valor en numeros para N:"
+	Leer N
+	
+	Repetir 
+		iteracion = 2
+		suma = 0
+		Escribir "========================================"
+		Escribir "ELIJA UN CICLO:"
+		Escribir "========================================"
+		Escribir "Escoja 1 para el ciclo PARA"
+		Escribir "Escoja 2 para el ciclo MIENTRAS"
+		Escribir "Escoja 3 para el ciclo REPETIR"
+		Leer opciones 
+		
+		Segun opciones hacer 
+			1: Escribir "Ciclo PARA"
+				Para iteracion <- 2 Hasta N Con Paso 2 hacer 
+					Escribir iteracion
+					suma <- suma + iteracion 
+				FinPara
+				Escribir "La suma es: ", suma 
+				Escribir "Fin del ciclo PARA"
+			2:	Escribir "Ciclo MIENTRAS"
+				Mientras iteracion <= N Hacer
+					Escribir iteracion
+					suma <- suma + iteracion 
+					iteracion <- iteracion + 2
+				FinMientras
+				Escribir "La suma es: ", suma 
+				Escribir "Fin del ciclo MIENTRAS"
+			3: Escribir "Ciclo REPETIR"
+				Repetir 
+					Escribir iteracion
+					suma <- suma + iteracion 
+					iteracion <- iteracion + 2
+				Hasta Que iteracion > N
+				Escribir "La suma es: ", suma 
+				Escribir "Fin del ciclo REPETIR"
+			4: Escribir "Saliendo del Programa..."
+			De Otro Modo:
+				Escribir "Opcion no valida"
+		FinSegun
+	Hasta Que opciones = 4 
+FinAlgoritmo
